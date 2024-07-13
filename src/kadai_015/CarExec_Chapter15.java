@@ -7,7 +7,7 @@ public class CarExec_Chapter15 {
         Car_Chapter15 gear = new Car_Chapter15(1,10) ;
         
         //ギアを３に切り替える
-        gear.gearChange(4) ;
+        gear.gearChange(3) ;
         gear.run();
 	}
 
