@@ -2,8 +2,8 @@ package kadai_015;
 
 public class Car_Chapter15 {
 	//フィールド
-   private int gear = 1 ;//ギア
-   private int speed = 10 ;//速度
+   private int gear ;//ギア
+   private int speed ;//速度
    
     //コントラスタ
    public Car_Chapter15(int gear , int speed) {
@@ -13,8 +13,8 @@ public class Car_Chapter15 {
    }
 //メソッド
    public void gearChange(int afterGear) {
-	   System.out.println("ギア"+gear+"からギア"+afterGear+"に切り替えました") ;
-	   afterGear = this.gear ;
+	   System.out.println("ギア"+this.gear+"からギア"+afterGear+"に切り替えました") ;
+	   this.gear = afterGear ;
 	   //ギアと速度の定義づけ
 	   this.speed = switch(this.gear) {
 	   case 1 ->  10 ;
@@ -24,9 +24,10 @@ public class Car_Chapter15 {
 	   case 5 ->  50 ;
 	   default -> 10 ;
 	   } ;
+	   
    }
    
    public void run () {
-	   System.out.println("速度は時速"+speed+"kmです");
+	   System.out.println("速度は時速"+this.speed+"kmです");
    }
 }
